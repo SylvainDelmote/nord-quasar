@@ -1,22 +1,31 @@
 // Quasar SCSS (& Sass) Variables
 // --------------------------------------------------
 
+body{
+  --q-positive :  var(--nord14);
+  --q-negative :   var(--nord11);
+  --q-info :   var(--nord13);
+  --q-warning :   var(--nord12);
+}
+
 
 body.body--light{
   --q-primary : white;
-  --q-secondary : var(--nord7);
+  --q-secondary : var(--nord3);
   --q-accent: var(--nord10);
+  --q-dark :var(--nord1);
 
   background-color: var(--q-primary);
-
 }
 
 body.body--dark{
   --q-primary : var(--nord1);
-  --q-secondary : var(--nord2);
+  --q-secondary : var(--nord4);
   --q-dark : var(--nord1);
   --q-accent: var(--nord12);
 
-  background-color: var(--q-primary);
 
+  background-color: var(--q-primary);
 }
+
+

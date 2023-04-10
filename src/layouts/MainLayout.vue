@@ -4,27 +4,27 @@ import DarkModeSwitch from 'src/components/Global/DarkModeSwitch.vue'
 import TheDrawer from 'src/components/Drawer/TheDrawer.vue'
 const menuItems = [
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
+    title: 'Index',
+    caption: 'Page Index',
     icon: 'school',
-    link: '/index'
+    link: '/'
   },
   {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
+    title: 'Sous Menu',
+    caption: 'Reste a faire',
     icon: 'code',
     sousmenu: {
       title: 'Github',
       caption: 'github.com/quasarframework',
       icon: 'code',
-      link: '/index'
+      link: '/'
     }
   },
   {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
+    title: 'Options',
+    caption: 'Vos Options',
     icon: 'chat',
-    link: '/index'
+    link: 'options'
   },
   {
     title: 'Forum',
