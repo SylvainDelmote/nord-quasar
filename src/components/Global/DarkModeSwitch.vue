@@ -19,6 +19,7 @@ watch(isDark, toggleDarkMode)
   <q-toggle
   v-model="isDark"
   color="accent"
+  keep-color
   :label= "`${pluginIsEnabled && isInDevMode ? ' ':'Activez le module Dark dans framework/config' }`"
   left-label
   checked-icon="dark_mode"
