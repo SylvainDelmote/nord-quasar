@@ -3,8 +3,8 @@ import { ref, computed } from 'vue'
 import { useQuasar } from 'quasar'
 import * as Drawer from 'components/Drawer/drawer'
 const drawerOpen = ref(true)
-
 const $q = useQuasar()
+
 const props = defineProps({
   menuItems: Array
 })
@@ -13,14 +13,19 @@ const isMobile = computed(() => {
   return $q.screen.lt.md
 })
 
+const headerHeight = 100
+const userPanelHeight = 100
+
 </script>
 
 <template>
-<q-drawer v-model="drawerOpen" :mini="isMobile"  persistent behavior="desktop" bordered>
-  <Drawer.Header :height=150   :isMobile="isMobile"/>
-  <Drawer.Menu :menuItems = props.menuItems  :isMobile="isMobile" />
-  <Drawer.UserPanel :height=150  :isMobile="isMobile" />
-
+<q-drawer v-model="drawerOpen" :mini="isMobile"  persistent behavior="desktop" >
+  <Drawer.Header :height=headerHeight   :isMobile="isMobile"/>
+  <Drawer.Menu :top_height="headerHeight" :bottom_height=userPanelHeight :menuItems = props.menuItems  :isMobile="isMobile" />
+  <Drawer.UserPanel :height=userPanelHeight  :isMobile="isMobile" />
 </q-drawer>
-
 </template>
+
+<style  lang="scss">
+
+</style>

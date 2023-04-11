@@ -1,4 +1,7 @@
 <script setup>
+import { ref } from 'vue'
+
+const showTooltip = ref(false)
 
 const props = defineProps({
   height: {
@@ -10,6 +13,7 @@ const props = defineProps({
     default: false
   }
 })
+
 </script>
 
 <template>
@@ -17,7 +21,7 @@ const props = defineProps({
   <div v-if="props.isMobile" class=" header-wrapper  q-py-md">
     <q-avatar text-color="accent">
       <div class="text-h4">     {{ $t('titre').charAt(0)}}  </div>
-      <q-tooltip v-model="showing"> {{$t('titre')}} </q-tooltip>
+      <q-tooltip v-model="showTooltip"> {{$t('titre')}} </q-tooltip>
     </q-avatar>
   </div>
 
@@ -28,7 +32,7 @@ const props = defineProps({
     </RouterLink>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .header-wrapper{
   height: v-bind( "` ${ props.height}px ` ");
   position: absolute;

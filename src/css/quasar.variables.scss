@@ -6,6 +6,10 @@ body{
   --q-negative :   var(--nord11);
   --q-info :   var(--nord13);
   --q-warning :   var(--nord12);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 30%;
+
 }
 
 
@@ -14,6 +18,7 @@ body.body--light{
   --q-secondary : var(--nord3);
   --q-accent: var(--nord10);
   --q-dark :var(--nord1);
+  background-image: url('assets/wave_light.svg');
 
   background-color: var(--q-primary);
 }
@@ -24,6 +29,10 @@ body.body--dark{
   --q-dark : var(--nord1);
   --q-accent: var(--nord12);
 
+  background-image: url('assets/wave_dark.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 30%;
 
   background-color: var(--q-primary);
 }

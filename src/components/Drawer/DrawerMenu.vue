@@ -5,20 +5,28 @@ const props = defineProps({
   isMobile: {
     type: Boolean,
     default: false
+  },
+  top_height: {
+    type: Number,
+    default: 100
+  },
+  bottom_height: {
+    type: Number,
+    default: 150
   }
 
 })
-
 </script>
 
 <template>
- <q-scroll-area style="height: calc(100% - 150px); margin-top: 150px; ">
+ <q-scroll-area class="menu-container" >
+  <q-list>
     <q-item
     v-for=" item in props.menuItems"
     clickable
     :to="item.link"
     :key="item.title"
-    class="text-secondary"
+    class="text-secondary q-py-md"
   >
     <q-item-section v-if="item.icon" avatar>
       <q-icon :name="item.icon"  />
@@ -28,8 +36,23 @@ const props = defineProps({
       <q-item-label>{{ item.title }}</q-item-label>
       <q-item-label class="text-secondary text-weight-light" caption>{{ item.caption }}</q-item-label>
     </q-item-section>
-  </q-item>
 
+    </q-item>
+
+  </q-list>
  </q-scroll-area>
-
+≈
 </template>
+
+<style scoped lang="scss">
+
+  $margin-top: v-bind( "` ${ props.top_height}px ` ");
+  $margin-bottom: v-bind( "` ${ props.bottom_height}px ` ");
+ .menu-container{
+  height: calc(100% -  #{$margin-top} -  #{$margin-bottom} );
+  margin-top:  #{$margin-top} ;
+  margin-bottom: #{$margin-bottom} ;
+  border-right: 1px solid var( --nord3)  ;
+ }
+
+</style>

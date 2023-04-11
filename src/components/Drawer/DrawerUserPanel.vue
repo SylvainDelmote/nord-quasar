@@ -36,7 +36,7 @@ const avatar = ref('https://cdn.quasar.dev/img/boy-avatar.png')
 </RouterLink>
 </template>
 
-<style scoped>
+<style >
 .panel-wrapper{
   height: v-bind( "` ${ props.height}px ` ");
   cursor: pointer;
