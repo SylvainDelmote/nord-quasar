@@ -1,7 +1,8 @@
 
 <script setup>
-import DarkModeSwitch from 'src/components/Global/DarkModeSwitch.vue'
-import TheDrawer from 'src/components/Drawer/TheDrawer.vue'
+import TheDrawer from 'src/components/Layout/TheDrawer.vue'
+import TheHeader from 'src/components/Layout/TheHeader.vue'
+
 const menuItems = [
   {
     title: 'Index',
@@ -56,11 +57,8 @@ const menuItems = [
 
 <template>
   <q-layout view="lHh lpR lFf" >
-    <q-header class="flex justify-end" >
-        <DarkModeSwitch/>
-    </q-header>
-
-  <TheDrawer  :menuItems = 'menuItems' />
+    <TheHeader />
+    <TheDrawer  :menuItems = 'menuItems' />
 
     <q-page-container>
       <router-view />
