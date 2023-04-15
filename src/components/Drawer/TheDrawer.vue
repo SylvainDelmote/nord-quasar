@@ -19,7 +19,7 @@ const userPanelHeight = 100
 </script>
 
 <template>
-<q-drawer v-model="drawerOpen" :mini="isMobile"  persistent behavior="desktop" >
+<q-drawer  id="drawer" v-model="drawerOpen" :mini="isMobile"  persistent behavior="desktop"  >
   <Drawer.Header :height=headerHeight   :isMobile="isMobile"/>
   <Drawer.Menu :top_height="headerHeight" :bottom_height=userPanelHeight :menuItems = props.menuItems  :isMobile="isMobile" />
   <Drawer.UserPanel :height=userPanelHeight  :isMobile="isMobile" />
@@ -27,5 +27,12 @@ const userPanelHeight = 100
 </template>
 
 <style  lang="scss">
+
+#drawer{
+background-image: url('assets/drawer_bg.svg');
+background-repeat: no-repeat;
+background-position: center;
+background-size: 120%;
+}
 
 </style>
