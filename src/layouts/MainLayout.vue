@@ -2,63 +2,13 @@
 <script setup>
 import TheDrawer from 'src/components/Layout/TheDrawer.vue'
 import TheHeader from 'src/components/Layout/TheHeader.vue'
-
-const menuItems = [
-  {
-    title: 'Index',
-    caption: 'Page Index',
-    icon: 'school',
-    link: '/'
-  },
-  {
-    title: 'Sous Menu',
-    caption: 'Reste a faire',
-    icon: 'code',
-    sousmenu: {
-      title: 'Github',
-      caption: 'github.com/quasarframework',
-      icon: 'code',
-      link: '/'
-    }
-  },
-  {
-    title: 'Options',
-    caption: 'Vos Options',
-    icon: 'chat',
-    link: 'options'
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: '/index'
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: '/index'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: '/index'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: '/index'
-  }
-]
-
+import { drawerLinkList } from 'src/components/Layout/DrawerLinkList'
 </script>
 
 <template>
   <q-layout view="lHh lpR lFf" >
     <TheHeader />
-    <TheDrawer  :menuItems = 'menuItems' />
+    <TheDrawer  :drawerLinkList = 'drawerLinkList' />
 
     <q-page-container>
       <router-view />

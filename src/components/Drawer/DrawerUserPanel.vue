@@ -11,7 +11,7 @@ const props = defineProps({
   }
 })
 
-const avatar = ref('https://cdn.quasar.dev/img/boy-avatar.png')
+const avatar = ref('src/assets/Boy.png')
 
 </script>
 
@@ -29,8 +29,8 @@ const avatar = ref('https://cdn.quasar.dev/img/boy-avatar.png')
       <img :src=avatar >
     </q-avatar>
     <div>
-      <div class="text-weight-bold">Razvan Stoenescu</div>
-      <div>@rstoenescu</div>
+      <div class="text-weight-bold"> Sylvain Delmote </div>
+      <div>@delmote.me</div>
     </div>
     </div>
 </RouterLink>

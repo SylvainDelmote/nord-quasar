@@ -6,7 +6,7 @@ const drawerOpen = ref(true)
 const $q = useQuasar()
 
 const props = defineProps({
-  menuItems: Array
+  drawerLinkList: Array
 })
 
 const isMobile = computed(() => {
@@ -19,9 +19,10 @@ const userPanelHeight = 100
 </script>
 
 <template>
-<q-drawer  id="drawer" v-model="drawerOpen" :mini="isMobile"  persistent behavior="desktop"  >
+<q-drawer  id="drawer" v-model="drawerOpen" :mini="isMobile"
+  persistent behavior="desktop"  >
   <Drawer.Header :height=headerHeight   :isMobile="isMobile"/>
-  <Drawer.Menu :top_height="headerHeight" :bottom_height=userPanelHeight :menuItems = props.menuItems  :isMobile="isMobile" />
+  <Drawer.Menu :top_height="headerHeight" :bottom_height=userPanelHeight :menuItems = props.drawerLinkList  :isMobile="isMobile" />
   <Drawer.UserPanel :height=userPanelHeight  :isMobile="isMobile" />
 </q-drawer>
 </template>

@@ -11,6 +11,12 @@ const routes = [
         meta: { title: 'Home Page' }
       },
       {
+        path: '/placeholder',
+        component: () => import('pages/PlaceholderPage.vue'),
+        name: 'bientot',
+        meta: { title: 'Bientôt' }
+      },
+      {
         path: '/options',
         component: () => import('pages/OptionsPage.vue'),
         name: 'Options',
